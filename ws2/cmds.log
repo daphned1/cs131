@@ -1,0 +1,16 @@
+    2  cd cs131
+    4  mkdir ws2
+    6  cd ws2
+    7  echo $HOME
+    8  id -u
+    9  id -g
+   10  id -G
+   11  id
+   12  ls /proc/
+   18  head /proc/meminfo
+   23  head /proc/cpuinfo
+   24  tail /proc/cpuinfo
+   25  cat /proc/cpuinfo
+   30  ls /etc
+   31  cat /etc/os-release
+   33  history > cmds.log
