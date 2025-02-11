@@ -1,0 +1,2 @@
+  123  grep '2019-01-02' ../2019-01-h1.csv | cut -d ',' -f 8 | sort | uniq -c | sort -r | head -n 3 > ws3.txt
+  129  grep '2019-01-10' ../2019-01-h1.csv | cut -d ',' -f 8 | sort | uniq -c | sort -r | head -n 3 >> ws3.txt
