@@ -1,0 +1,29 @@
+  210  vim ~/.bashrc
+  211  l
+  212  w
+  213  cd cs131/a1
+  214  mkdir FARE
+  217  cat 2019-01-h1.csv
+  220  grep "2019" ~/2019-01-h1.csv > data.txt
+  221  vim data.txt
+  239  grep "48.0,161.0" data.txt | cut -d ',' -f11 > FARE/48.0-161.0.txt
+  241  head 48.0-161.0.txt
+  243  grep "162.0,224.0" data.txt | cut -d ',' -f11 > FARE/162.0-224.0.txt
+  249  echo $(paste -sd+ FARE/48.0-161.0.txt | bc)
+  251  echo $(wc -l < FARE/48.0-161.0.txt)
+  254  echo $(paste -sd+ FARE/48.0-161.0.txt | bc)/$(wc -l < FARE/48.0-161.0.txt) | bc
+  256  echo "scale=2; $(paste -sd+ FARE/48.0-161.0.txt | bc)/$(wc -l < FARE/48.0-161.0.txt)" | bc >> a1.txt
+  257  cat a1.txt
+  258  echo "scale=2; $(paste -sd+ FARE/162.0-224.0.txt | bc)/$(wc -l < FARE/162.0-224.0.txt)" | bc >> a1.txt
+  259  cat a1.txt
+  260  vim a1.txt
+  262  grep '2019-01-10' ~/2019-01-h1.csv | cut -d ',' -f17 | sort | uniq -c | sort -nr | head -n 1 >> a1.txt
+  263  cat a1.txt
+  264  grep '2019-01-10' ~/2019-01-h1.csv | cut -d ',' -f17 | sort | uniq | sort -nr | head -n 1 >> a1.txt
+  265  cat a1.txt
+  266  vim a1.txt
+  269  cat a1.txt
+  272  grep -E ',[3-9].0,' ~/2019-01-h1.csv | cut -d ',' -f9 | sort | uniq -c | sort -nr | head -n 10 >> a1.txt
+  273  cat a1.txt
+  274  vim a1.txt
+  319  history > cmds.log
