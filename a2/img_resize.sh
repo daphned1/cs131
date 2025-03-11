@@ -24,7 +24,7 @@ if [ ! -e "$INPUT_PATH" ]; then
     echo " Error: '$INPUT_PATH' does not exist."
 fi
 
-# Create an output directory
+# Create an output directory if it doesn't exist
 OUTPUT_DIR="resized_imgs"
 mkdir -p "$OUTPUT_DIR"
 
@@ -43,7 +43,7 @@ resize_img() {
     echo " "
 }
 
-# Process single file or directory
+# Resize single or multiple images
 if [ -f "$INPUT_PATH" ]; then
     resize_img "$INPUT_PATH"
 elif [ -d "$INPUT_PATH" ]; then
