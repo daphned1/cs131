@@ -9,7 +9,7 @@ This command is useful if you want all your images to be resized at once, instea
 
 ## How You Can Use This Command
 1. Install ImageMagick: ```sudo apt install imagemagick```
-2. Create a directory and place all the images you want to resize. If you only want to resize one, you can put it in the same directory as the shell script or in its own dedicated folder.
+2. Create a directory and place all the images (MUST be in jpg/jpeg/png/gif format) you want to resize. If you only want to resize one, you can put it in the same directory as the shell script or in its own dedicated folder.
 3. Run the script with two arguments: the image directory and size you wish to resize it to.
 	```./img_resize.sh [IMAGE DIRECTORY] [SIZE (in % or 'wxh' format)]```
 4. Check in 'resized\_imgs' directory for the new images
