@@ -30,13 +30,14 @@ mkdir -p "$OUTPUT_DIR"
 
 # Function to resize an image
 resize_img() {
-    local image="$1"
-    local filename=$(basename "$image")
-    local output_image="$OUTPUT_DIR/resized_$filename"
-    local original_dimensions=$(identify -format "%wx%h\n" "$image")
+    image="$1"
+    filename=$(basename "$image")
+    output_image="$OUTPUT_DIR/resized_$filename"
+    original_dimensions=$(identify -format "%wx%h\n" "$image")
 
     convert "$image" -resize "$NEW_SIZE" "$output_image"
-    local new_dimensions=$(identify -format "%wx%h\n" "$output_image")
+    new_dimensions=$(identify -format "%wx%h\n" "$output_image")
+    
     echo "Resized: $image → $output_image"
     echo "Original image dimensions: $original_dimensions"
     echo "New image dimensions: $new_dimensions"
@@ -54,5 +55,5 @@ else
     echo "Please provide a valid file or directory."
 fi
 
-echo "FINISHED. All images have been resized and saved in '$OUTPUT_DIR'."
+echo "FINISHED. All resized images can be found in '$OUTPUT_DIR'."
 
