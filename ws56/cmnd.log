@@ -1,0 +1,23 @@
+  512  sed -n '/^2.0,/p' 2019-01-h1.csv > vendor2.csv
+  513  head vendor2.csv
+  514  wc vendor2.csv
+  515  wc vendor2.csv > ws56.txt
+  517  sed 's/[:\"-]//g' 2019-01-h1.csv > no-separators.csv
+  518  head -10 no-separators.csv
+  519  head -10 no-separators.csv >> ws56.txt
+  521  sed 's/\.[0-9]*//g' no-separators.csv 
+  523  sed 's/\.[0-9]*//g' no-separators.csv > no-fractions.csv
+  524  head -10 no-fractions.csv
+  525  head -10 no-fractions.csv >> ws56.txt
+  526  vim ws56.txt
+  527  awk -F ',' '$17 >= 10 {tips[$14]++} END {for (t in tips) print t, tips[t]}' 2019-01-h1.csv
+  528  awk -F ',' '$17 >= 10 {tips[$14]++} END {for (t in tips) print t, tips[t]}' 2019-01-h1.csv > tips_freq.txt
+  529  head -20 tips_freq.txt
+  530  head -20 tips_freq.txt >> ws56.txt
+  531  vim ws56.txt
+  533  awk -F ',' '{freq[$14]++} END {for (t in freq) print t, freq[t]}' 2019-01-h1.csv
+  534  awk -F ',' '{freq[$14]++} END {for (t in freq) print t, freq[t]}' 2019-01-h1.csv | sort -k2 -nr > common_tips.txt
+  535  head -20 common_tips.txt
+  546  head -20 common_tips.txt >> ws56.txt
+  547  vim ws56.txt
+  548  history > cmnd.log
