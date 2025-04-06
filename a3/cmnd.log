@@ -1,0 +1,19 @@
+  568  mkdir a3
+  569  cd a3
+  571  vim grader.awk
+  574  vim grades.csv
+  576  vim grader.awk
+  577  awk -f grader.awk grades.csv
+  579  vim grader.awk
+  580  awk -f grader.awk grades.csv
+  581  vim grader.awk
+  582  awk -f grader.awk grades.csv
+  583  vim grades.csv
+  584  awk -f grader.awk grades.csv
+  585  vim grades.csv
+  586  awk -f grader.awk grades.csv
+  587  vim grader.awk
+  588  awk -f grader.awk grades.csv > a3.txt
+  589  ls
+  590  vim a3.txt
+  591  history > cmnd.log
